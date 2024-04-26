@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #calc {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div id="calc">
+            <h1>Maths operation</h1>
+            First number: <input type="text" id="d1">
+            <br>
+            2nd number: <input type="text" id="d2">
+            <br>
+            <div style="display: flex;">
+                <div>
+                    <button onclick="add()">+</button>
+                    <button onclick="subt()">-</button>
+                    <button onclick="Multi()">*</button>
+                    <button onclick="divi()">/</button>
+                    <button onclick="Mod()">%</button>
+                </div>
+
+                <div>
+                     <h1>          ANSWER IS :  <span id="total"></span></h1>
+                </div>
+            </div>
+        </div>
+    </center>
+    <script>
+        function add() {
+            let a = document.getElementById("d1").value;
+            let b = document.getElementById("d2").value;
+            let c = Number(a) + Number(b);
+            // document.getElementById(c).value =Number(a)+ Number(b);
+            document.getElementById("total").innerHTML = c
+
+        }
+        function subt() {
+            let a = document.getElementById("d1").value;
+            let b = document.getElementById("d2").value;
+            let c = Number(a) - Number(b);
+            // document.getElementById(c).value =Number(a)+ Number(b);
+            document.getElementById("total").innerHTML = c
+        }
+        function Multi() {
+            let a = document.getElementById("d1").value;
+            let b = document.getElementById("d2").value;
+            let c = Number(a) * Number(b);
+            // document.getElementById(c).value =Number(a)+ Number(b);
+            document.getElementById("total").innerHTML = c
+        }
+        function divi() {
+            let a = document.getElementById("d1").value;
+            let b = document.getElementById("d2").value;
+            let c = Number(a) / Number(b);
+            // document.getElementById(c).value =Number(a)+ Number(b);
+            document.getElementById("total").innerHTML = c
+        }
+        function Mod() {
+            let a = document.getElementById("d1").value;
+            let b = document.getElementById("d2").value;
+            let c = Number(a) % Number(b);
+            // document.getElementById(c).value =Number(a)+ Number(b);
+            document.getElementById("total").innerHTML = c
+        }
+    </script>
+</body>
+
+</html>
